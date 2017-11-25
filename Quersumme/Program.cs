@@ -102,7 +102,7 @@ namespace Quersumme
             {
                 Console.Clear();
                 Console.WriteLine("Error! Please dowload more RAM!");
-                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("-------------------------------");
                 Console.WriteLine("Press any key to continue");
                 Console.ReadKey();
                 goto Start;     //Jump to start label
