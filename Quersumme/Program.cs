@@ -12,6 +12,7 @@ namespace Quersumme
         {
             int length;
             int summe;
+            int Test;
             int switchcase = 1;
             string quer_string;
             string X = "Y";
