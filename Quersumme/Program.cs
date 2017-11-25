@@ -19,9 +19,9 @@ namespace Quersumme
             {
                 do
                 {
-                    Console.Clear();
+                    Console.Clear();                       
                     summe = 0;
-                    Console.Write("Please enter a number: ");
+                    Console.Write("Please enter a number: ");     
                     quer_string = Convert.ToString(Console.ReadLine());
                     length = quer_string.Length - 1;
                     string[] quer_sub = new string[length + 1];
@@ -54,24 +54,24 @@ namespace Quersumme
                     Console.WriteLine("");
 
 
-                    switch (switchcase)                                            //Switch-Case zur verarbeitung der Wiederholungsabfrage + Verarbeitung von fehleingaben
+                    switch (switchcase)                                            
                     {
-                        case 1:                                              //Case1 Wiederholung wird abgefragt
+                        case 1:                                            
                             Console.Write("Wiederholen? Y/N: ");
                             X = Console.ReadLine();
                             X = X.ToLower();
                             goto case 2;
-                        case 2:                                              //Wenn Variable X y oder n entspricht wird switch-case beendet
+                        case 2:                                              
                             if (X.ToLower() == "y" || X.ToLower() == "n")
                             {
                                 break;
                             }
                             else
-                            {                            //Wenn Variable X nicht y oder n entspricht wird case 1 wiederholt
+                            {                            
                                 goto case 1;
                             }
                         default:
-                            Console.WriteLine("Unknown Error");     //Default case
+                            Console.WriteLine("Unknown Error");    
                             goto case 1;
                     }
 
@@ -84,13 +84,13 @@ namespace Quersumme
 
             catch (FormatException)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine("Unkown Error! Please restart Brain.exe!");
             }
 
 
             catch (OverflowException)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine("Error! Please dowload more RAM!");
             }
 
 
