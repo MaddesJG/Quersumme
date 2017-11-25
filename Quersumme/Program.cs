@@ -49,7 +49,7 @@ namespace Quersumme
                     {
                         summe = summe + summenarray[i];
                     }
-                    Console.WriteLine("----------------------------------------");
+                    Console.WriteLine("-----------------------------------------");
                     Console.WriteLine("Ergebniss: {0}", summe);
                     Console.WriteLine("");
 
