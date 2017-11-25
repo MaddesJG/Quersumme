@@ -15,10 +15,12 @@ namespace Quersumme
             int switchcase = 1;
             string quer_string;
             string X = "Y";
-            try
+        Start:
+            do
             {
-                do
+                try
                 {
+                
                     Console.Clear();                       
                     summe = 0;
                     Console.Write("Please enter a number: ");     
@@ -50,14 +52,14 @@ namespace Quersumme
                         summe = summe + summenarray[i];
                     }
                     Console.WriteLine("-----------------------------------------");
-                    Console.WriteLine("Ergebniss: {0}", summe);
+                    Console.WriteLine("Result: {0}", summe);
                     Console.WriteLine("");
 
 
                     switch (switchcase)                                            
                     {
                         case 1:                                            
-                            Console.Write("Wiederholen? Y/N: ");
+                            Console.Write("Repeat program? Y/N: ");
                             X = Console.ReadLine();
                             X = X.ToLower();
                             goto case 2;
@@ -67,8 +69,11 @@ namespace Quersumme
                                 break;
                             }
                             else
-                            {                            
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Invalid Input");
                                 goto case 1;
+                                
                             }
                         default:
                             Console.WriteLine("Unknown Error");    
@@ -78,20 +83,32 @@ namespace Quersumme
 
 
 
-                } while (X == "y");
+                
 
             }
 
             catch (FormatException)
             {
+                Console.Clear();
                 Console.WriteLine("Unkown Error! Please restart Brain.exe!");
-            }
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
+                goto Start;
+                }
 
 
             catch (OverflowException)
             {
+                Console.Clear();
                 Console.WriteLine("Error! Please dowload more RAM!");
-            }
+                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
+                goto Start;
+
+                }
+        } while (X == "y");
 
 
 
