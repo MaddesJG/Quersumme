@@ -15,7 +15,7 @@ namespace Quersumme
             int switchcase = 1;
             string quer_string;
             string X = "Y";
-        Start:
+        Start:                      //Start label in case of errors
             do
             {
                 try
@@ -105,7 +105,7 @@ namespace Quersumme
                 Console.WriteLine("---------------------------------------");
                 Console.WriteLine("Press any key to continue");
                 Console.ReadKey();
-                goto Start;
+                goto Start;     //Jump to start label
 
                 }
         } while (X == "y");
