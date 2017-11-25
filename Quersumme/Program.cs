@@ -15,7 +15,7 @@ namespace Quersumme
             int switchcase = 1;
             string quer_string;
             string X = "Y";
-        Start:                      //Start label in case of errors
+        Start:                      //Start label (see error handling)
             do
             {
                 try
