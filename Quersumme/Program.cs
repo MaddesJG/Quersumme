@@ -38,14 +38,6 @@ namespace Quersumme
                         Console.WriteLine("{0}: {1}", i + 1, summenarray[i]);
                     }
 
-
-                    for (int i = 0; i <= length; i++)
-                    {
-                        summenarray[i] = Convert.ToInt32(summenarray[i]);
-                    }
-
-
-
                     for (int i = 0; i <= length; i++)
                     {
                         summe = summe + summenarray[i];
@@ -53,7 +45,6 @@ namespace Quersumme
                     Console.WriteLine("-----------------------------------------");
                     Console.WriteLine("Result: {0}", summe);
                     Console.WriteLine("");
-
 
                     switch (switchcase)                                            
                     {
@@ -71,18 +62,13 @@ namespace Quersumme
                             {
                                 Console.Clear();
                                 Console.WriteLine("Invalid Input");
-                                goto case 1;
-                                
+                                goto case 1;                            
                             }
                         default:
                             Console.WriteLine("Unknown Error");    
                             goto case 1;
                     }
-
-
-
-
-                
+                                    
 
             }
 
@@ -108,9 +94,7 @@ namespace Quersumme
 
                 }
         } while (X == "y");
-
-
-
+            
         }
     }
 }
