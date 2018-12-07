@@ -74,7 +74,7 @@ namespace Quersumme
             catch (FormatException)
             {
                 Console.Clear();
-                Console.WriteLine("Unkown Error! Please restart Brain.exe!");
+                Console.WriteLine("Unknown Error! Please restart Brain.exe!");
                 Console.WriteLine("---------------------------------------");
                 Console.WriteLine("Press any key to continue");
                 Console.ReadKey();
