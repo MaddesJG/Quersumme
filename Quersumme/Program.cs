@@ -82,7 +82,7 @@ namespace Quersumme
                 }
 
 
-            catch (OverflowException)
+            catch (NullReferenceException)
             {
                 Console.Clear();
                 Console.WriteLine("Error! Please dowload more RAM!");
