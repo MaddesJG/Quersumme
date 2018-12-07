@@ -28,7 +28,7 @@ namespace Quersumme
                     int[] summenarray = new int[length + 1];
                     for (int i = 0; i <= length; i++)
                     {
-                        summenarray[i] = Convert.ToInt32(quer_string.Substring(i, 1));
+                        StringMethod(quer_string, summenarray, i);
 
                     }
 
@@ -94,6 +94,11 @@ namespace Quersumme
                 }
         } while (X == "y");
             
+        }
+
+        private static void StringMethod(string quer_string, int[] summenarray, int i)
+        {
+            summenarray[i] = Convert.ToInt32(quer_string.Substring(i, 1));
         }
     }
 }
