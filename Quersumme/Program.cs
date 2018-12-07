@@ -10,7 +10,6 @@ namespace Quersumme
     {
         static void Main(string[] args)
         {
-            int length;
             int summe;
             int switchcase = 1;
             string quer_string;
@@ -24,8 +23,8 @@ namespace Quersumme
                     Console.Clear();                       
                     summe = 0;
                     Console.Write("Please enter a number: ");     
-                    quer_string = Convert.ToString(Console.ReadLine());                    
-                    length = quer_string.Length - 1;                    
+                    quer_string = Convert.ToString(Console.ReadLine());
+                    int length = quer_string.Length - 1;
                     int[] summenarray = new int[length + 1];
                     for (int i = 0; i <= length; i++)
                     {
