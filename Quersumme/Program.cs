@@ -19,11 +19,11 @@ namespace Quersumme
             {
                 try
                 {
-                
-                    Console.Clear();                       
+
+                    Console.Clear();
                     summe = 0;
-                    Console.Write("Please enter a number: ");     
-                    quer_string = Convert.ToString(Console.ReadLine());
+                    Console.Write("Please enter a number: ");
+                    quer_string = ConvertString();
                     int length = quer_string.Length - 1;
                     int[] summenarray = new int[length + 1];
                     for (int i = 0; i <= length; i++)
@@ -45,14 +45,14 @@ namespace Quersumme
                     Console.WriteLine("Result: {0}", summe);
                     Console.WriteLine("");
 
-                    switch (switchcase)                                            
+                    switch (switchcase)
                     {
-                        case 1:                                            
+                        case 1:
                             Console.Write("Continue? Y/N: ");
                             X = Console.ReadLine();
                             X = X.ToLower();
                             goto case 2;
-                        case 2:                                              
+                        case 2:
                             if (X.ToLower() == "y" || X.ToLower() == "n")
                             {
                                 break;
@@ -61,17 +61,17 @@ namespace Quersumme
                             {
                                 Console.Clear();
                                 Console.WriteLine("Invalid Input");
-                                goto case 1;                            
+                                goto case 1;
                             }
                         default:
-                            Console.WriteLine("Unknown Error");    
+                            Console.WriteLine("Unknown Error");
                             goto case 1;
                     }
-                                    
 
-            }
 
-            catch (FormatException)
+                }
+
+                catch (FormatException)
             {
                 Console.Clear();
                 Console.WriteLine("Unknown Error! Please restart Brain.exe!");
@@ -94,6 +94,11 @@ namespace Quersumme
                 }
         } while (X == "y");
             
+        }
+
+        private static string ConvertString()
+        {
+            return Convert.ToString(Console.ReadLine());
         }
 
         private static void StringMethod(string quer_string, int[] summenarray, int i)
