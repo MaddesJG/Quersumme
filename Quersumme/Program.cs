@@ -49,7 +49,7 @@ namespace Quersumme
                     switch (switchcase)                                            
                     {
                         case 1:                                            
-                            Console.Write("Repeat program? Y/N: ");
+                            Console.Write("Continue? Y/N: ");
                             X = Console.ReadLine();
                             X = X.ToLower();
                             goto case 2;
