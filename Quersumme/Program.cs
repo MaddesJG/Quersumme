@@ -14,7 +14,7 @@ namespace Quersumme
             int switchcase = 1;
             string quer_string;
             string X = "Y";
-        Start:                      
+        Start:        //start point                 
             do
             {
                 try
@@ -23,18 +23,18 @@ namespace Quersumme
                     Console.Clear();
                     summe = 0;
                     Console.Write("Please enter a number: ");
-                    quer_string = ConvertString();
+                    quer_string = ConvertString();       //call method ConvertString
                     int length = quer_string.Length - 1;
-                    int[] summenarray = new int[length + 1];
+                    int[] summenarray = new int[length + 1];    //create array
                     for (int i = 0; i <= length; i++)
                     {
-                        StringMethod(quer_string, summenarray, i);
+                        StringMethod(quer_string, summenarray, i);     //call method StringMethod
 
                     }
 
                     for (int i = 0; i <= length; i++)
                     {
-                        Console.WriteLine("{0}: {1}", i + 1, summenarray[i]);
+                        Console.WriteLine("{0}: {1}", i + 1, summenarray[i]);           //write the content of the array in a list
                     }
 
                     for (int i = 0; i <= length; i++)
@@ -42,10 +42,10 @@ namespace Quersumme
                         summe = summe + summenarray[i];
                     }
                     Console.WriteLine("-----------------------------------------");
-                    Console.WriteLine("Result: {0}", summe);
+                    Console.WriteLine("Result: {0}", summe);            //output the result
                     Console.WriteLine("");
 
-                    switch (switchcase)
+                    switch (switchcase)               //switchcase to continue/close the program
                     {
                         case 1:
                             Console.Write("Continue? Y/N: ");
@@ -78,18 +78,18 @@ namespace Quersumme
                 Console.WriteLine("---------------------------------------");
                 Console.WriteLine("Press any key to continue");
                 Console.ReadKey();
-                goto Start;
+                goto Start;                   //jumps to Start
                 }
 
 
-            catch (NullReferenceException)
+            catch (NullReferenceException)                              
             {
                 Console.Clear();
                 Console.WriteLine("Error! Please dowload more RAM!");
                 Console.WriteLine("-------------------------------");
                 Console.WriteLine("Press any key to continue");
                 Console.ReadKey();
-                goto Start;     
+                goto Start;                     //jumps to Start
 
                 }
         } while (X == "y");
@@ -98,12 +98,12 @@ namespace Quersumme
 
         private static string ConvertString()
         {
-            return Convert.ToString(Console.ReadLine());
+            return Convert.ToString(Console.ReadLine());                        //method converts input into string
         }
 
         private static void StringMethod(string quer_string, int[] summenarray, int i)
         {
-            summenarray[i] = Convert.ToInt32(quer_string.Substring(i, 1));
+            summenarray[i] = Convert.ToInt32(quer_string.Substring(i, 1));          //method converts strings to int32 and adds them to the array
         }
     }
 }
